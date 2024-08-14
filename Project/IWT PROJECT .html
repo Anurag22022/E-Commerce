@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HELL'S KITCHEN</title>
+	<link rel="stylesheet" type="text/css" href="E:/Project/Circle One.css">
+	
+</head>
+<body>
+<div class="header bg3">
+	<h1 class="center jumbo" style="color:white">---HELLS KITCHEN---</h1>
+</div>
+<!-- nevbar -->
+<div class="navbar navcolor">
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#menu">Menu</a>
+    <a href="#reserve">Reserve</a>
+     <a href="E:\Project/add to cart.html">Order</a>
+  <a href="#contact" class="right">Contact Us</a>
+</div>
+
+
+
+
+<!-- About Container -->
+<div class="container padding-64 black  xxlarge bg8 "  id="about">
+  <div class="content ">
+  	<br><br>
+    <h1 class="center jumbo" style="margin-bottom:64px">About</h1>
+    
+    <table class="CU">
+    	<th><p><strong>Our logo</strong>&nbsp;&nbsp;</p><p><img src="E:\logo.jpg" style="width:400px" class="circle  " alt="logo"></p></th>
+    	<th><p class="center">Our Interiors</p>
+    <img src="E:\Project/cover9.png" style="width:50%" class="margin-top margin-bottom  " alt="Restaurant"></th>
+    </table>
+    
+    
+    <h1 class="center"><b>Opening Hours</b></h1>
+    <table style="width: 100%">
+    	<div class="">
+     <th> <div class="">
+        <p>Mon & Tue 10:00 - 21:00</p>
+        <p>Wednesday 10:00 - 21:00</p>
+        <p>Thursday 10:00 - 21:00</p>
+      </div></th>
+     <th> <div class="">
+        <p>Friday 10:00 - 21:00</p>
+        <p>Saturday 10:00 - 20:00</p>
+        <p>Sunday 10:00 - 20:00</p>
+      </div></th>
+    </div>
+    </table>
+    
+    
+  </div>
+</div>
+
+<!-- gallery Container -->
+<div>
+  <div class="container black padding-64 xxlarge bg6 " id="gallery">
+  <div class="content">
+  
+    <h1 class="center jumbo" style="margin-bottom:64px color:red">THE GALLERY</h1>
+
+    <div class="slideshow-container">
+
+<div class="mySlides ">
+  <div class="numbertext">1 / 8</div>
+  <img src="E:\Project/covers/cover2.png" style="width:100%">
+  
+</div>
+
+<div class="mySlides ">
+  <div class="numbertext">2 / 8</div>
+  <img src="E:\Project/cover3.png" style="width:100%">
+ 
+</div>
+
+<div class="mySlides ">
+  <div class="numbertext">3 / 8</div>
+  <img src="E:\Project/cover4.png" style="width:100%">
+  
+</div>
+<div class="mySlides ">
+  <div class="numbertext">4 / 8</div>
+  <img src="E:\Project/cover5.png" style="width:100%">
+  
+</div>
+<div class="mySlides ">
+  <div class="numbertext">5 / 8</div>
+  <img src="E:\Project/cover6.png" style="width:100%">
+  
+</div>
+<div class="mySlides ">
+  <div class="numbertext">6 / 8</div>
+  <img src="E:\Project/cover7.png" style="width:100%">
+  
+</div>
+<div class="mySlides ">
+  <div class="numbertext">7 / 8</div>
+  <img src="E:\Project/cover8.png" style="width:100%">
+  
+</div>
+<div class="mySlides ">
+  <div class="numbertext">8 / 8</div>
+  <img src="E:\Project/cover9.png" style="width:100%">
+  
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span>  
+</div>
+    
+</div>
+</div>
+ 
+
+
+
+<!-- gallery Script -->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</div>
+ 
+
+
+<!-- Menu Container -->
+<div class="container black padding-64 xxlarge bg5" id="menu">
+  <div class="content">
+  
+    <h1 class="center jumbo" style="margin-bottom:64px;color: red">THE MENU</h1>
+    <div class="row center  ">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Breakfast');" id="myLink">
+        <div class=" tablink padding-large ">Breakfast</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Lunch');">
+        <div class="tablink padding-large ">Lunch</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Dinner');">
+        <div class="tablink padding-large ">Dinner</div>
+      </a>
+       <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class=" tablink padding-large ">Drinks</div>
+      </a>
+    </div>
+
+    <div id="Breakfast" class="container menu padding-32 black">
+      <button class="button hover-red"><h1 ><b class="menuButton">Gobhi Paratha</b> <span class="right  dark-grey round">&#8377 30.00</span></h1>
+      </button>
+      
+   
+       <button class="button hover-red"><h1 ><b class="menuButton">Aaloo Paratha</b> <span class="right  dark-grey round">&#8377 20.00</span></h1>
+      </button>
+      
+       <button class="button hover-red"><h1 ><b class="menuButton">omelette</b> <span class="right  dark-grey round">&#8377 20.00</span></h1>
+      </button>
+
+       <button class="button hover-red"><h1 ><b class="menuButton">Maggi</b> <span class="right  dark-grey round">&#8377 20.00</span></h1>
+      </button>
+
+       <button class="button hover-red"><h1 ><b class="menuButton">Aaloo Tikki</b> <span class="right  dark-grey round">&#8377 20.00</span></h1>
+      </button>
+
+       <button class="button hover-red"><h1 ><b class="menuButton">Samosa Chat</b> <span class="right  dark-grey round">&#8377 20.00</span></h1>
+      </button>
+    </div>
+
+    <div id="Lunch" class="container menu padding-32 black">
+       <button class="button hover-red"><h1 ><b class="menuButton">Chhole Bhature</b> <span class="right  dark-grey round">&#8377 50.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Daal</b> <span class="right  dark-grey round">&#8377 30.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Paneer</b> <span class="right  dark-grey round">&#8377 50.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Mess Thali</b> <span class="right  dark-grey round">&#8377 70.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Roti</b> <span class="right  dark-grey round">&#8377 8.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Butter Naan</b> <span class="right  dark-grey round">&#8377 15.00</span></h1>
+      </button>
+    </div>
+
+
+    <div id="Dinner" class="container menu padding-32 black">
+      <button class="button hover-red"><h1 ><b class="menuButton">Manchurian with fried rice</b> <span class="right  dark-grey round">&#8377 50.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Cheese Chilli</b> <span class="right  dark-grey round">&#8377 90.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Daal</b> <span class="right  dark-grey round">&#8377 30.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Naan Combo</b> <span class="right  dark-grey round">&#8377 50.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Roti</b> <span class="right  dark-grey round">&#8377 8.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Butter Naan</b> <span class="right  dark-grey round">&#8377 15.00</span></h1>
+      </button>
+      <button class="button hover-red"><h1 ><b class="menuButton">Mess Thali</b> <span class="right dark-grey round">&#8377 70.00</span></h1>
+      </button>
+    </div>
+
+    <div id="Drinks" class="container menu padding-32 black">
+      <button class="button hover-red"><h1 ><b class="menuButton">Frappe</b> <span class="right  dark-grey round">&#8377 55.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Choco Frappe</b> <span class="right  dark-grey round">&#8377 65.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Lemon Ice Tea</b> <span class="right  dark-grey round">&#8377 50.00</span></h1>
+      </button>
+       <button class="button hover-red"><h1 ><b class="menuButton">Real Juice</b> <span class="right dark-grey round">&#8377 20.00</span></h1>
+      </button>
+    </div><br>
+
+   
+
+  </div>
+</div>
+<!-- menu script -->
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" black", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " black";
+
+}
+document.getElementById("myLink").click();
+</script>
+
+<!-- reserve container -->
+<div class="container padding-64 black grayscale-min xlarge bg2" id="reserve">
+  <div class="content">
+  	<fieldset>
+    <h1 class="center jumbo" style="margin-bottom:64px">RESERVE YOUR SEAT HERE</h1>
+   
+    
+    <p class="xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="mailto:Hellskitchen@gmail.com" method="post" enctype="text/plain">
+      <p><input class="input padding-16 border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="input padding-16 border" type="number" placeholder="How many people" required name="people"></p>
+      <p><input class="input padding-16 border" type="datetime-local" placeholder="Date and time" required name="date" ></p>
+      <p><input class="input padding-16 border" type="text" placeholder="Message \ Special requirements" required name="message"></p>
+      <p><button class="button hover-red " type="submit">SEND MESSAGE</button></p>
+    </form>
+    </fieldset>
+  </div>
+</div>
+
+<!-- contact container -->
+<div class="container padding-64 black grayscale-min xlarge bg1" id="contact">
+  <div class="content">
+  	
+    <h1 class="center jumbo" style="margin-bottom:64px">Contact Us </h1>
+    <p class="xxlarge"><strong>Feedback</strong> Your feedback is valuable for us</p>
+    
+    <form action="mailto:Hellkitchen@gmail.com" method="post" enctype="text/plain">
+    	<textarea rows="10" cols="100" name="comment"  class="overflow">
+ Give your feedback here...</textarea>
+      <p><button class="button hover-red " type="submit">SEND FEEDBACK</button></p>
+    </form>
+
+    
+    <table style="width: 100%">
+   <th> <p>
+
+   	
+    	Follow us on : &nbsp;&nbsp;&nbsp;
+      <a href="https://www.facebook.com/">  <img src="E:\Project/facebook.png" style="width:50px" class="circle"  alt="logo"></a>&nbsp;&nbsp;
+    <a href="https://www.instagram.com/accounts/login/?hl=en"><img src="E:\Project/instagram.png" style="width:50px" class="circle  " alt="logo"></a>&nbsp;&nbsp;
+      <a href="https://twitter.com/login?lang=en"> <img src="E:\Project/twitter.png" style="width:50px" class="circle  " alt="logo"></a>&nbsp;&nbsp;
+    </p></th>
+   <th> <br><br><p>
+   	    <img src="E:\Project/gmail.png" style="width:50px" class="circle  " alt="logo">&nbsp;&nbsp;
+          Hellkitchen@gmail.com<br><br>
+        <img src="E:\Project/whatsapp.png" style="width:50px" class="circle  " alt="logo">&nbsp;&nbsp;
+        +91 999-999-9999
+    </p></th>
+</table>
+
+  </div>
+</div>
+
+<!-- footer -->
+
+<footer class="center bcolor padding-24 xxlarge">
+  <p>IWT PROJECT<br>By- Anurag * Anubhav Choudhary </p>
+</footer>
+
+
+</body>
+</html>
